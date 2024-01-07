@@ -5,12 +5,18 @@ import { Avatar, AvatarProps } from '@ixs-ignite-ui/react'
 export default {
   title: 'Data display/Avatar',
   component: Avatar,
+  tags: ['autodocs'],
   args: {
     src: 'https://github.com/italoxs.png',
     alt: 'Italo Sales',
   },
-
-  tags: ['autodocs'],
+  argTypes: {
+    src: {
+      control: {
+        type: 'text',
+      },
+    },
+  },
 } as Meta<AvatarProps>
 
 export const Primary: StoryObj<AvatarProps> = {}
