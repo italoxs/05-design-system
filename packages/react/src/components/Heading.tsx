@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-empty-interface */
-import { ComponentProps } from 'react'
+import { ComponentProps, ElementType } from 'react'
 import { styled } from '../styles'
 
 export const Heading = styled('h2', {
@@ -26,6 +26,8 @@ export const Heading = styled('h2', {
   },
 })
 
-export interface HeadingProps extends ComponentProps<typeof Heading> {}
+export interface HeadingProps extends ComponentProps<typeof Heading> {
+  as?: ElementType
+}
 
 Heading.displayName = 'Heading'
